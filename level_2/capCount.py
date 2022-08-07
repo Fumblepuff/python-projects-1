@@ -10,8 +10,8 @@ for i in sys.argv[1:]:
     #This list will hold the indices of the capital letters
     indices = []
     
-    #This variable will hold the total of the indices
-    total = 0
+    #This variable will hold the sum of the indices
+    sum = 0
     
     #Iterating through the string
     for j in input:
@@ -24,11 +24,11 @@ for i in sys.argv[1:]:
     
     #Iterating through the list of indices
     for k in indices:
-        #Adding the index to the total
-        total += k
+        #Adding the index to the sum
+        sum += k
     
     
     #Printing the count of capital letters
     print(count)
     #Printing the added indices of the capital letters
-    print(total)
+    print(sum)
