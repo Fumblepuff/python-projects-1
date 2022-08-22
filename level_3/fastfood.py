@@ -1,5 +1,6 @@
 import pandas as pd
 import statsmodels.api as sms
+import numpy
 
 fast_food = pd.read_csv('fastfood.csv')
 fast_food = fast_food[['total_fat','sat_fat','cholesterol','sodium','calories']]
@@ -19,13 +20,15 @@ print(model.mse_total.round(2))
 
 print(model.rsquared.round(2))
 
-print("total_fat" + " {:.2f}".format(model.params[1]))
-print("sat_fat" + "{:.2f}".format(model.params[2]))
-print("cholesterol" + "{:.2f}".format(model.params[3]))
-print("sodium" + "{:.2f}".format(model.params[4]))
+print("total_fat" + " {:.2f}".format(numpy.float64(model.params[1])))
+print("sat_fat" + " {:.2f}".format(numpy.float64(model.params[2])))
+print("cholesterol" + " {:.2f}".format(numpy.float64(model.params[3])))
+print("sodium" + " {:.2f}".format(numpy.float64(model.params[4])))
+print("dtype: "+ type(numpy.float64(model.params[1])))
 
 
-print("total_fat" + " {:.2f}".format(model.pvalues[1]))
-print("sat_fat" + "{:.2f}".format(model.pvalues[2]))
-print("cholesterol" + "{:.2f}".format(model.pvalues[3]))
-print("sodium" + "{:.2f}".format(model.pvalues[4]))
+print("total_fat" + " {:.2f}".format(numpy.float64(model.pvalues[1])))
+print("sat_fat" + " {:.2f}".format(numpy.float64(model.pvalues[2])))
+print("cholesterol" + " {:.2f}".format(numpy.float64(model.pvalues[3])))
+print("sodium" + " {:.2f}".format(numpy.float64(model.pvalues[4])))
+print("dtype: "+ type(numpy.float64(model.pvalues[1])))
