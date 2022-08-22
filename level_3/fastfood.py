@@ -24,11 +24,11 @@ print("total_fat" + " {:.2f}".format(numpy.float64(model.params[1])))
 print("sat_fat" + " {:.2f}".format(numpy.float64(model.params[2])))
 print("cholesterol" + " {:.2f}".format(numpy.float64(model.params[3])))
 print("sodium" + " {:.2f}".format(numpy.float64(model.params[4])))
-print("dtype: "+ type(numpy.float64(model.params[1])))
+print("dtype: "+ type(model.params[1]))
 
 
 print("total_fat" + " {:.2f}".format(numpy.float64(model.pvalues[1])))
 print("sat_fat" + " {:.2f}".format(numpy.float64(model.pvalues[2])))
 print("cholesterol" + " {:.2f}".format(numpy.float64(model.pvalues[3])))
 print("sodium" + " {:.2f}".format(numpy.float64(model.pvalues[4])))
-print("dtype: "+ type(numpy.float64(model.pvalues[1])))
+print("dtype: "+ type(model.pvalues[1]))
