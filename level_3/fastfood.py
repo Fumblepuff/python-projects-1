@@ -19,12 +19,13 @@ print(model.mse_total.round(2))
 
 print(model.rsquared.round(2))
 
-#print(model.params.round(2))
+print("total_fat" + " {:.2f}".format(model.params[1]))
+print("sat_fat" + "{:.2f}".format(model.params[2]))
+print("cholesterol" + "{:.2f}".format(model.params[3]))
+print("sodium" + "{:.2f}".format(model.params[4]))
 
-for i in range(len(model.params)):
-    print("{:.2f}".format(model.params[i]))
 
-#print(model.pvalues.round(2))
-
-for i in range(len(model.pvalues)):
-    print("{:.2f}".format(model.pvalues[i]))
+print("total_fat" + " {:.2f}".format(model.pvalues[1]))
+print("sat_fat" + "{:.2f}".format(model.pvalues[2]))
+print("cholesterol" + "{:.2f}".format(model.pvalues[3]))
+print("sodium" + "{:.2f}".format(model.pvalues[4]))
